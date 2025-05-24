@@ -1,64 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Compact Top Tabs</title>
   <style>
     body {
       margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
+      background: transparent;
     }
 
-    .tab-container {
+    .tabs {
       display: flex;
       justify-content: center;
-      align-items: center;
-      padding: 8px;
-      background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 5px;
+      background: transparent;
     }
 
-    .tab-container a {
+    .tabs a {
       margin: 0 5px;
-      padding: 6px 14px;
-      border-radius: 20px;
+      padding: 6px 12px;
+      font-size: 13px;
       text-decoration: none;
-      font-size: 14px;
       color: white;
+      border-radius: 20px;
       font-weight: 600;
-      transition: transform 0.2s;
     }
 
-    .tab-container a:hover {
-      transform: scale(1.05);
-    }
-
-    .matric { background-color: #ff5733; }
-    .inter  { background-color: #33b5e5; }
-    .grad   { background-color: #9c27b0; }
-    .job    { background-color: #4CAF50; }
+    .tabs .one { background: #e74c3c; }
+    .tabs .two { background: #2980b9; }
+    .tabs .three { background: #27ae60; }
+    .tabs .four { background: #8e44ad; }
   </style>
 </head>
 <body>
-
-  <div class="tab-container">
-    <a href="https://example.com" class="matric">10th</a>
-    <a href="https://example.com" class="inter">12th</a>
-    <a href="https://example.com" class="grad">Graduation</a>
-    <a href="https://example.com" class="job">Job</a>
+  <div class="tabs">
+    <a href="https://example.com" class="one">10th</a>
+    <a href="https://example.com" class="two">12th</a>
+    <a href="https://example.com" class="three">Graduation</a>
+    <a href="https://example.com" class="four">Job</a>
   </div>
-
-  <!-- Just dummy content to test -->
-  <div style="margin-top: 60px; padding: 10px;">
-    
-  </div>
-
 </body>
 </html>
