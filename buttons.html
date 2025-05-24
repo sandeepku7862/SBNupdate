@@ -3,25 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Small Tabs</title>
+  <title>Compact Top Tabs</title>
   <style>
     body {
       margin: 0;
-      padding: 10px;
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #ffffff;
     }
 
     .tab-container {
-      text-align: center;
-      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .tab-container a {
-      display: inline-block;
-      margin: 4px 6px;
+      margin: 0 5px;
       padding: 6px 14px;
-      border-radius: 18px;
+      border-radius: 20px;
       text-decoration: none;
       font-size: 14px;
       color: white;
@@ -33,21 +40,10 @@
       transform: scale(1.05);
     }
 
-    .matric {
-      background-color: #ff5733;
-    }
-
-    .inter {
-      background-color: #33b5e5;
-    }
-
-    .grad {
-      background-color: #9c27b0;
-    }
-
-    .job {
-      background-color: #4CAF50;
-    }
+    .matric { background-color: #ff5733; }
+    .inter  { background-color: #33b5e5; }
+    .grad   { background-color: #9c27b0; }
+    .job    { background-color: #4CAF50; }
   </style>
 </head>
 <body>
@@ -57,6 +53,11 @@
     <a href="https://example.com" class="inter">12th</a>
     <a href="https://example.com" class="grad">Graduation</a>
     <a href="https://example.com" class="job">Job</a>
+  </div>
+
+  <!-- Just dummy content to test -->
+  <div style="margin-top: 60px; padding: 10px;">
+    
   </div>
 
 </body>
