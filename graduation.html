@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SBN Update - Graduation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 0;
+    }
+    /* Header */
+    h1 {
+      text-align: center;
+      color: #fff;
+      padding: 20px;
+      background-color: #2980b9; /* Dark Blue */
+      margin: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    /* Top bar for dropdown buttons */
+    .top-bar {
+      background-color: #3498db; /* Blue */
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      width: 150px;
+    }
+
+    /* Dropdown button */
+    .dropbtn {
+      background-color: #2980b9; /* Darker Blue */
+      color: white;
+      padding: 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    .dropbtn:hover {
+      background-color: #1c5980;
+      transform: scale(1.05);
+    }
+
+    /* Dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 150px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      z-index: 1;
+      margin-top: 5px;
+      padding: 0;
+    }
+    .dropdown-content a {
+      color: #34495e;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid #eee;
+      font-weight: normal;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+      color: #3498db;
+      font-weight: bold;
+    }
+
+    /* Show dropdown on click */
+    .show {
+      display: block;
+    }
+
+    /* Ticker */
+    .ticker {
+      background-color: #ffeb3b;
+      color: #000;
+      padding: 10px 0;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      margin-top: 10px;
+    }
+    .ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: ticker 15s linear infinite;
+    }
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 900px;
+    }
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #34495e;
+      text-align: center;
+      border-bottom: 2px solid #ccc;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    a.button {
+      background-color: #3498db;
+      color: white;
+      padding: 12px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: block;
+      text-align: center;
+      transition: background-color 0.3s, transform 0.2s;
+      cursor: pointer;
+    }
+    a.button:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+    .join-buttons {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .join-buttons a {
+      margin: 10px;
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.2s;
+    }
+    .telegram {
+      background-color: #0088cc;
+    }
+    .whatsapp {
+      background-color: #25D366;
+    }
+    .join-buttons a:hover {
+      transform: scale(1.1);
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    footer a {
+      color: #00d1ff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎓 SBN Update - Graduation Portal 🎓</h1>
+
+  <!-- Top bar with dropdown buttons -->
+  <div class="top-bar">
+    <div class="dropdown">
+      <button onclick="toggleDropdown('coursesDropdown')" class="dropbtn">Courses ▼</button>
+      <div id="coursesDropdown" class="dropdown-content">
+        <a href="https://example.com/ba">BA</a>
+        <a href="https://example.com/bsc">BSc</a>
+        <a href="https://example.com/bcom">BCom</a>
+        <a href="https://example.com/bca">BCA</a>
+        <a href="https://example.com/example">example.com</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button onclick="toggleDropdown('universityDropdown')" class="dropbtn">Universities ▼</button>
+      <div id="universityDropdown" class="dropdown-content">
+        <a href="https://tmbu.org">TMBU</a>
+        <a href="https://ignou.ac.in">IGNOU</a>
+        <a href="https://example.com/university1">University 1</a>
+        <a href="https://example.com/university2">University 2</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker">
+    <span>📢 Graduation Registration Open! | Admit Card Released! | Result Date Announced! | Scholarship Application Live!</span>
+  </div>
+
+  <div class="card">
+    <div class="section-title">🎓 Graduation</div>
+    <div class="grid-container">
+      <a href="https://example.com/graduation-registration" class="button">Registration</a>
+      <a href="https://example.com/graduation-admit-card" class="button">Admit Card</a>
+      <a href="https://example.com/graduation-result" class="button">Result</a>
+      <a href="https://example.com/graduation-syllabus" class="button">Syllabus</a>
+      <a href="https://example.com/graduation-model-paper" class="button">Model Paper</a>
+      <a href="https://example.com/graduation-notes" class="button">PDF Notes</a>
+      <a href="https://example.com/graduation-scholarship" class="button">Scholarship</a>
+    </div>
+  </div>
+
+  <div class="join-buttons">
+    <a href="https://t.me/sbnupdates" class="telegram">📢 Join Telegram</a>
+    <a href="https://wa.me/919999999999" class="whatsapp">💬 Join WhatsApp</a>
+  </div>
+
+  <footer>
+    <p>📞 Contact: <a href="mailto:sbnupdate@gmail.com">sbnupdate@gmail.com</a></p>
+    <p>📃 Disclaimer: This is an informational site. We are not affiliated with any university. कृपया आधिकारिक वेबसाइट से जांच करें।</p>
+    <p>© 2025 <strong>SBN Update</strong>. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Dropdown toggle function
+    function toggleDropdown(id) {
+      document.getElementById(id).classList.toggle("show");
+      // Close other dropdown if open
+      const otherDropdowns = ['coursesDropdown', 'universityDropdown'].filter(i => i !== id);
+      otherDropdowns.forEach(otherId => {
+        const el = document.getElementById(otherId);
+        if (el.classList.contains("show")) {
+          el.classList.remove("show");
+        }
+      });
